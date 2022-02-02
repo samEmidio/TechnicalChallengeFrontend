@@ -1,5 +1,4 @@
 
-
   <div class="container">
     <div class="info">
       <h1>Flat Login Form</h1><span>Technical Challenge</span>
@@ -8,11 +7,13 @@
   <div class="form">
     <div class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/hat.svg"/></div>
     <form class="register-form">
-      <input type="text" placeholder="name"/>
-      <input type="password" placeholder="password"/>
-      <input type="text" placeholder="email address"/>
-      <button>create</button>
-      <p class="message">Already registered? <a href="#">Sign In</a></p>
+      <input [(ngModel)]="user.name" name="name" type="text" placeholder="name"/>
+      <input [(ngModel)]="user.lastName" name="lastName" type="text" placeholder="last name"/>
+      <input [(ngModel)]="user.email" name="email" type="text" placeholder="email address"/>
+      <input [(ngModel)]="user.pass" name="pass" type="password" placeholder="password"/>
+
+      <button  (click)="register(user)">{{isLoading ? 'Loading...' : 'Create'}}</button>
+      <p class="message">Already registered? <a (click)="navigateToLogin()" href="javascript:void(0)">Sign In</a></p>
     </form>
 
   </div>

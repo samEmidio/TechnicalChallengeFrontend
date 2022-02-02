@@ -1,0 +1,28 @@
+
+
+<div class="wrapper">
+
+
+  <div class="profile">
+    <img  src="https://image.freepik.com/free-vector/illustration-light-bulb-icon_53876-43730.jpg?w=340" class="thumbnail">
+    <h3 class="name">Novo Evento ?</h3>
+    <p class="title">Vamos la..</p>
+
+
+    <form class="form">
+      <input [(ngModel)]="evt.description"  name="eventName" type="text" placeholder="Evento"/>
+      <input [(ngModel)]="evt.additionalInformation"  name="eventInformation" type="text" placeholder="Descrição"/>
+      <input  [(ngModel)]="evt.date" name="eventDate" type="date" placeholder="Data"/>
+      <button type="button" class="btn" (click)="create(evt)">Criar</button>
+    </form>
+
+
+
+  </div>
+
+
+</div>
+
+
+
+

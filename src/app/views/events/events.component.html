@@ -1,0 +1,17 @@
+
+
+
+<div class="container">
+
+  <app-event-resume-create (createEvent)="parrentEventHandlerFunctionEventCreate($event)"></app-event-resume-create>
+
+  <div *ngFor="let item of events">
+    <app-event-resume [event]="item" (deleteEvent)="parrentEventHandlerFunctionDeleteEvent($event)"></app-event-resume>
+  </div>
+
+
+
+
+</div>
+
+

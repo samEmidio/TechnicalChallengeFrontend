@@ -1,6 +1,5 @@
 
-
-  <div class="container">
+<div class="container">
     <div class="info">
       <h1>Flat Login Form</h1><span>Technical Challenge</span>
     </div>
@@ -9,10 +8,10 @@
     <div class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/hat.svg"/></div>
 
     <form class="login-form">
-      <input type="text" placeholder="username"/>
-      <input type="password" placeholder="password"/>
-      <button>login</button>
-      <p class="message">Not registered? <a href="#">Create an account</a></p>
+      <input [(ngModel)]="login.email" name="email" type="text" placeholder="email"/>
+      <input [(ngModel)]="login.pass" name="pass" type="password" placeholder="password"/>
+      <button  (click)="authentication(login.email,login.pass)">{{isLoading ? 'Loading...' : 'Login'}}</button>
+      <p class="message">Not registered? <a (click)="navigateToRegister()" href="javascript:void(0)">Create an account</a></p>
     </form>
   </div>
 

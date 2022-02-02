@@ -1,0 +1,32 @@
+<div class="sidebar">
+  <div class="logo-details">
+    <i class='bx bxl-c-plus-plus icon'></i>
+      <div class="logo_name">CodingLab</div>
+      <i class='bx bx-menu' id="btn" ></i>
+  </div>
+  <ul class="nav-list">
+
+    <li>
+      <a (click)="navigateToHome()" href="javascript:void(0)">
+        <i class='bx bx-grid-alt'></i>
+        <span class="links_name">Events</span>
+      </a>
+       <span class="tooltip">Events</span>
+    </li>
+
+
+
+   <li class="profile">
+    <a (click)="logout()" href="javascript:void(0)">
+      <i class='bx bx-log-out'></i>
+      <span class="links_name">Logout</span>
+    </a>
+     <span class="tooltip">Logout</span>
+
+   </li>
+  </ul>
+</div>
+<section class="home-section">
+    <div class="text"></div>
+    <router-outlet></router-outlet>
+</section>

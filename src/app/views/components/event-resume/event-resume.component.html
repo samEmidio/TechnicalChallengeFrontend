@@ -1,0 +1,37 @@
+
+
+<div class="wrapper">
+  <div class="top-icons">
+
+    <a href="javascript:void(0)" (click)="removeEvent(event.eventId)">
+      <i class="fas fa-times-circle" ></i>
+    </a>
+
+  </div>
+
+  <div class="profile">
+    <img src="https://image.freepik.com/free-vector/bang-wording-comic-speech-bubble-pop-art-style_1150-39956.jpg?w=740" class="thumbnail">
+    <h3 class="name">{{event.description}}</h3>
+    <p class="title">{{event.date}}</p>
+    <p class="description">{{event.additionalInformation}}</p>
+    <button type="button" class="btn" (click)="navigateToEventDetails()">Visualizar</button>
+  </div>
+
+  <div class="social-icons">
+    <div class="icon">
+
+      <h4>{{event.totalUsers}}</h4>
+      <p>Amigos</p>
+    </div>
+
+
+
+    <div class="icon">
+
+      <h4>R${{event.totalPaid}}</h4>
+      <p>Grana até agora</p>
+    </div>
+  </div>
+</div>
+
+

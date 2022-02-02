@@ -1,0 +1,42 @@
+
+ <div class="container">
+
+  <ul class="responsive-table">
+    <li class="table-header">
+      <div class="col col-2">Customer Name</div>
+      <div class="col col-3">Amount Due</div>
+      <div class="col col-4">Payment Status</div>
+    </li>
+
+    <li class="table-row">
+      <input class="input" [(ngModel)]="user.name"  name="name" type="text" placeholder="Digite o nome aqui"/>
+      <input class="input"  [(ngModel)]="user.value" name="value" type="number" placeholder="Digite o valor a ser pago aqui"/>
+      <div style="width: 200px;">
+        <button type="button" class="btn btn-primary btn-lg" (click)="saveUser(user)">+</button>
+      </div>
+
+    </li>
+
+    <li class="table-row">
+      <div class="col col-2" data-label="Customer Name"></div>
+      <div class="col col-3" data-label="Amount"> <i class="fas fa-coins text-warning"></i> R$ {{eventResumeDetail.totalPaid  }} / R$ {{eventResumeDetail.totalToPay}}</div>
+      <div class="col col-4" data-label="Payment Status"><i class="fas fa-users text-info"></i> {{eventResumeDetail.totalPaidUsers}} / {{eventResumeDetail.totalUsers}}</div>
+    </li>
+
+    <li *ngFor="let item of eventUsers" class="table-row">
+      <div class="col col-3" data-label="Customer Name">{{item.name}}</div>
+      <div class="col col-3" data-label="Amount">R${{item.value}}</div>
+      <div class="col col-3" data-label="Payment Status">
+        <input (change)="updateIsPaid(item.id,$event)" style="width: 20px;height: 20px;" type="checkbox" id="scales" name="scales" [checked]="item.isPaid">
+      </div>
+      <div class="col col-2">
+        <a href="javascript:void(0)" (click)="removeEventUser(item.id)">
+          <i class="fas fa-times-circle" ></i>
+        </a>
+      </div>
+    </li>
+
+  </ul>
+</div>
+
+
