@@ -41,6 +41,7 @@ export class RegisterComponent implements OnInit {
         this.isLoading = false;
         alert(error.errors[0])
         console.log(error.errors[0])
+        location.reload();
       })
     }
 }

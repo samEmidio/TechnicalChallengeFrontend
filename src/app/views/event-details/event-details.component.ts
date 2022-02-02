@@ -51,6 +51,7 @@ export class EventDetailsComponent implements OnInit {
     },error=>{
       alert(error.errors[0]);
       console.log(error.errors[0])
+      location.reload();
     });
   }
 
@@ -62,6 +63,7 @@ export class EventDetailsComponent implements OnInit {
     },error=>{
       alert(error.errors[0]);
       console.log(error.errors[0])
+      location.reload();
     })
 
   }
@@ -74,6 +76,7 @@ export class EventDetailsComponent implements OnInit {
     },error => {
       alert(error.errors[0]);
       console.log(error.errors[0])
+      location.reload();
     })
   }
 
@@ -86,6 +89,7 @@ export class EventDetailsComponent implements OnInit {
     },error => {
       alert(error.errors[0]);
       console.log(error.errors[0])
+      location.reload();
     })
 
   }
@@ -98,6 +102,7 @@ export class EventDetailsComponent implements OnInit {
     },error => {
       alert(error.errors[0]);
       console.log(error.errors[0])
+      location.reload();
     })
   }
 

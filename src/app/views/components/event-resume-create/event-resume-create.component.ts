@@ -39,6 +39,7 @@ export class EventResumeCreateComponent implements OnInit {
 
            alert(error.errors[0])
            console.log(error.errors[0])
+           location.reload();
         })
 
 

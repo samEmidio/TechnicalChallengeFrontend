@@ -28,6 +28,7 @@ export class EventResumeComponent implements OnInit {
       this.emitEventCreate();
     },error => {
       alert(error.errors[0]);
+      location.reload();
     })
   }
 

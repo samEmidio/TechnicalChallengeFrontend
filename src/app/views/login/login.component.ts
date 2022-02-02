@@ -40,6 +40,7 @@ export class LoginComponent implements OnInit {
             debugger;
             alert(error.errors[0])
             console.log(error.errors[0])
+            location.reload();
           })
 
         }
